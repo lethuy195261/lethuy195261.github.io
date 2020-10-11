@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  background-color: #E5E5E5;
+}
+
+
+#card{
+  margin: 40px 300px;
+  height: 520px;
+  width: 840px;
+  transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  perspective: 5000px;
+  -moz-perspective: 5000px;
+  -webkit-perspective: 5000px;
+  position: relative;
+}
+
+
+#card-front, #card-inside {
+  background-color: #fdfcfa;
+  width: 420px;
+  height: 520px;
+  text-align: center;
+  position: absolute;
+  -webkit-box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
+  -moz-box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
+  left: 50%;
+}
+
+#card-front {
+  background-image: url('picture.png');  
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 { 
+ font-family: 'Architects Daughter', cursive;
+ color: #000034;
+ text-transform: uppercase; 
+ font-weight: bold;
+ font-size: 3.0em;
+ margin: 2px;
+ }
+
+#icon {
+  margin: 50px 0 -40px 0;
+}
+
+.heart:before {
+content: '\2665';
+color: #000034;
+}
+
+
+
+#card-inside {
+  font-size: 1.1em;
+  line-height: 1.4;
+  font-family: 'Nobile';
+  color: #331717;
+  font-style: italic;
+}
+
+#apple_2{
+  width: 60%;
+  height: 45%;
+  margin: 25px -155px 0 0;
+}
+
+#content{
+  margin: -140px  60px -20px 80px;
+  text-align: left;
+}
+
+p {
+  margin-top: 0;
+
+}
+
+p:first-child {
+  font-size: 1.5em;
+  font-family: 'Architects Daughter', cursive;
+}
+
+#signed {
+    margin: 20px 50px 0 0;
+    text-align: right;
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 1.5em;
+}
+
+#apple{
+  width: 80%;
+  height: 50%;
+  margin: -160px 0  0 -90px;
+}
+
+#card-front {
+    background-color: #fdfcfa
+            transform-origin: left;
+       -moz-transform-origin: left;
+    -webkit-transform-origin: left;
+            transition:         transform 1s linear;
+       -moz-transition:    -moz-transform 1s linear;
+    -webkit-transition: -webkit-transform 1s linear;
+    position: relative;
+}
+      
+
+#card-front button {
+  position: absolute;
+  bottom: 1em;
+  right: -12px;
+  background: #F44;
+  color: #FFF;
+  font-family: 'Nobile', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: .5em;
+  border: none;
+  cursor: pointer;
+          box-shadow: 2px 2px 3px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .4);
+     -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .4);
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .4);
+}
+
+#card-front .wrap {
+            transition: background 1s linear;
+       -moz-transition: background 1s linear;
+    -webkit-transition: background 1s linear;
+}
+
+#card-front button:hover,
+#card-front button:focus {
+  background: #F22;
+}
+
+#close {
+  display: none;
+}
+
+#card.open-fully #close,
+#card-open-half #close {
+  display: inline;
+}
+
+#card.open-fully #open {
+  display: none;
+}
+
+
+#card.open-half #card-front,
+#card.close-half #card-front {
+            transform: rotateY(-90deg);
+       -moz-transform: rotateY(-90deg);
+    -webkit-transform: rotateY(-90deg);
+}
+
+#card.open-half #card-front #wrap {
+    background-color: #fdfcfa;
+}
+
+#card.open-fully #card-front,
+#card.close-half #card-front {
+  background: #fdfcfa;
+}
+
+#card.open-fully #card-front {
+    transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+}
+
+#card.open-fully #card-front #wrap {
+    background-color: #fdfcfa;
+}
+
+
+#card.open-fully #card-front #wrap *,
+#card.close-half #card-front #wrap * {
+   display: none;
+}
+
+
+
+
